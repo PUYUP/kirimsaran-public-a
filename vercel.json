@@ -1,5 +1,7 @@
 {
 	"build": {
-		"env": {}
+		"env": {
+    		"apiHost": "https://apiks.cliptask.com"
+		}
 	}
 }
