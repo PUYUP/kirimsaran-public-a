@@ -31,7 +31,7 @@ const data = {
       altText: 'Anonim',
       title: 'Anonim',
       text:
-        'Anda tidak akan bisa mengetahui pemberi saran. Anda hanya tahu mereka adalah pelanggan. Untuk pelanggan silahkan memberikan feedback negatif, data Anda selalu aman.',
+        'Anda tidak bisa mengetahui pemberi saran. Yang Anda tahu mereka adalah pelanggan. Bagi pelanggan silahkan memberikan feedback negatif, data Anda selalu aman.',
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const data = {
       altText: 'Mengumpulkan Feedback',
       title: 'Mengumpulkan Feedback',
       text:
-        'Cegah pelanggan menyebarkan isu buruk produk Anda. Berikan link Kirim Saran ke agar mereka bisa mengirimkan feedback ke setiap produk dengan mudah dan cepat.',
+        'Cegah pelanggan menyebarkan isu buruk produk Anda. Bagikan link Kirim Saran ke pelanggan agar mereka bisa memberikan feedback ke setiap produk dengan mudah dan cepat.',
     },
   ],
 };
