@@ -6,6 +6,9 @@ import { useCookies } from 'react-cookie';
 import PublicLayout from '../components/public-layout'
 import PublicNavbar from '../components/public-navbar'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 const axios = require('axios');
 const Swal = require('sweetalert2');
 
@@ -262,12 +265,16 @@ export default function Spread() {
 
   return (
     <>
+    
         {spreadData?.content_object_label == 'loading' &&
-        <p className="text-center p-4">Loading... Mohon tunggu</p>
+        <>
+            <p className="text-center p-4">Loading... Mohon tunggu</p>
+        </>
         }
 
         {spreadData?.content_object_label != 'loading' &&
         <form onSubmit={handleSubmit} method="POST">
+            
             <div className="shadow overflow-hidden mx-5">
                 <div className="px-4 py-4 bg-white">
                     <div className="border-b mb-2 pb-2 text-sm">
@@ -349,9 +356,11 @@ export default function Spread() {
                         <ReactStars
                             count={5}
                             onChange={ratingChanged}
-                            size={34}
+                            size={25}
                             activeColor="#fabb05"
                             value={rating}
+                            emptyIcon={<FontAwesomeIcon icon={faStar} />}
+                            filledIcon={<FontAwesomeIcon icon={faStar} />}
                         />
                     </div>
                     

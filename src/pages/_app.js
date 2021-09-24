@@ -6,6 +6,10 @@ import 'react-modal-video/css/modal-video.min.css';
 import 'rc-drawer/assets/index.css';
 import 'typeface-dm-sans';
 
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+
 import '../styles/globals.css';
 
 export default function CustomApp({ Component, pageProps }) {
