@@ -12,7 +12,7 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: 'Beta Testing',
+      name: 'Promo Softlaunch',
       description: 'Segera! Slot ini terbatas',
       buttonText: 'Buat Akun Bisnis',
       priceWithUnit: 'IDR 0',
