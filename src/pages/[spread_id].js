@@ -290,7 +290,7 @@ function Spread() {
                     <div className="border-b mb-2 pb-2 text-sm">
                         <div className="flex w-full">
                             <div>
-                                <span className="pr-2">Ulasan dan Saran untuk</span>
+                                <p className="block w-full text-xs text-red-700">Ulasan dan Saran untuk</p>
                                 <strong>{ spreadData.product }</strong>
                             </div>
 
