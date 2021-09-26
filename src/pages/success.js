@@ -94,7 +94,7 @@ export default function Success() {
 
                     <Link href="/account">
                         <a className="block bg-yellow-200 px-4 py-2 text-sm text-center border border-yellow-300">
-                            Lihat Saran Saya &rarr;
+                            Lihat Ulasan dan Saran Saya &rarr;
                         </a>
                     </Link>
                 </div>

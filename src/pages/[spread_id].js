@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { useEffect, useState } from 'react';
 import ReactStars from 'react-rating-stars-component'
 import { useCookies } from 'react-cookie';
@@ -52,7 +53,7 @@ function Reward(props) {
     )
 }
 
-export default function Spread() {
+function Spread() {
   const router = useRouter();
   const { spread_id } = router.query;
 
@@ -68,7 +69,8 @@ export default function Spread() {
       content_object_uuid: '',
       identifier: '',
       rewards: [],
-      product: ''
+      product: '',
+      introduction: '',
   });
   const [user, setUser] = useState();
   const [submitLoading, setSubmitLoading] = useState(0);
@@ -264,8 +266,16 @@ export default function Spread() {
   }
 
   return (
-    <>
-    
+    <>  
+        <Head>
+            {spreadData?.content_object_label != 'loading' &&
+                <>
+                    <title>Ulasan dan Saran Untuk {spreadData?.product}</title>
+                    <meta name="description" content={spreadData?.introduction.substring(0, 155)} />
+                </>
+            }
+        </Head>
+
         {spreadData?.content_object_label == 'loading' &&
         <>
             <p className="text-center p-4">Loading... Mohon tunggu</p>
@@ -280,7 +290,7 @@ export default function Spread() {
                     <div className="border-b mb-2 pb-2 text-sm">
                         <div className="flex w-full">
                             <div>
-                                <span className="pr-2">Saran untuk</span>
+                                <span className="pr-2">Produk</span>
                                 <strong>{ spreadData.product }</strong>
                             </div>
 
@@ -344,7 +354,7 @@ export default function Spread() {
                     }
 
                     <div className="mb-3">
-                        <label htmlFor="description" className="block text-sm font-medium text-gray-800">Saran Saya *</label>
+                        <label htmlFor="description" className="block text-sm font-medium text-gray-800">Ulasan dan Saran Saya *</label>
                         <textarea name="description" value={description} id="description" className="mt-1 block w-full border-gray-400 border py-1 px-2 bg-gray-50" rows="3" required onChange={e => setDescription(e.target.value)}></textarea>
                     </div>
 
@@ -411,3 +421,5 @@ Spread.getLayout = function getLayout(page) {
     </PublicLayout>
   )
 }
+
+export default Spread
